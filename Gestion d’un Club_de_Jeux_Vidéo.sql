@@ -38,3 +38,10 @@ CREATE table Emprunter(
     Foreign Key (id_Member) REFERENCES MEMBRE (id),
     Foreign Key (id_jeu) REFERENCES jeu (id)
     );
+
+create table Tournoi(
+    id int not null PRIMARY key AUTO_INCREMENT,
+    nom_tournoi varchar(50) not null,
+    date_tournoi date,
+    recompense VARCHAR(50)
+);
