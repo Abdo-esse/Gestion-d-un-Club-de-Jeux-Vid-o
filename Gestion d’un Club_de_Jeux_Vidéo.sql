@@ -45,3 +45,13 @@ create table Tournoi(
     date_tournoi date,
     recompense VARCHAR(50)
 );
+
+create table Participer(
+    id int not null PRIMARY key AUTO_INCREMENT,
+    id_Member int not null,
+    id_Tournoi int not null,
+    score DECIMAL(10,2),
+    range_final VARCHAR(30),
+    Foreign Key (id_Member) REFERENCES MEMBRE (id),
+    Foreign Key (id_Tournoi) REFERENCES Tournoi (id)
+);
