@@ -18,3 +18,12 @@ CREATE table MEMBRE(
     Foreign Key (id_Abonnement) REFERENCES Abonnement (id)
 );
 
+CREATE table jeu(
+    id int not null PRIMARY key AUTO_INCREMENT,
+    titre VARCHAR(50)not null,
+    colection VARCHAR(50) not null,
+    studio_develepement VARCHAR(50),
+    anne_Sortie date,
+    genre varchar(50),
+    individuell BOOLEAN
+)
