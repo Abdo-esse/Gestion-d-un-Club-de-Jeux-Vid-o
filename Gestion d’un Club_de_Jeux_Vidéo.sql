@@ -35,6 +35,7 @@ insert into MEMBRE(
     (null,5,'2024-06-20	','Youssef Bennani','+212 6 45 67 89 01'),
     (null,3,'2024-08-12	','Rachid ESSEMLALI','+212 6 87 65 43 21')
     );
+SELECT*from MEMBRE;
 
 CREATE table jeu(
     id int not null PRIMARY key AUTO_INCREMENT,
@@ -60,6 +61,17 @@ CREATE table Emprunter(
     date_retoure_relle date,
     Foreign Key (id_Member) REFERENCES MEMBRE (id),
     Foreign Key (id_jeu) REFERENCES jeu (id)
+    );
+
+    insert into Emprunter(
+        VALUES
+        (null,3,8,'2024-01-05','2024-01-12','2024-01-10'),
+        (null,1,3,'2024-01-08','2024-01-15','2024-01-18'),
+        (null,2,5,'2024-02-01','2024-02-08','2024-02-07'),
+        (null,7,1,'2024-03-10','2024-03-17	','2024-03-19'),
+        (null,5,9,'2024-06-25','2024-07-02','2024-06-30'),
+        (null,4,7,'2024-08-20','2024-08-27	','2024-08-29'),
+        (null,6,2,'2024-10-15','2024-10-22','2024-10-22')
     );
 
 create table Tournoi(
