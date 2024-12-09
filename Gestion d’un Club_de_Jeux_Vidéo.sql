@@ -9,6 +9,14 @@ CREATE table Abonnement(
     date_fin  date
 );
 
+insert into Abonnement(
+    values
+    (null,'Premium','2024-03-15','2025-03-14'),
+    (null,'Étudiant','2024-06-01','2024-11-30'),
+    (null,'Famille','2024-09-01	','2025-08-31'),
+    (null,'Pro','2024-02-01','2025-01-31')
+);
+
 CREATE table MEMBRE(
     id int not null PRIMARY key AUTO_INCREMENT,
     id_Abonnement int not null,
