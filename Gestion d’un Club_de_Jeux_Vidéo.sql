@@ -27,7 +27,13 @@ CREATE table jeu(
     genre varchar(50),
     individuell BOOLEAN
 );
-
+insert into jeu (
+    VALUES
+    (null,'GTA V','Grand Theft Auto','Rockstar North','2017-12-06','Action-aventure',0),
+    (null,'Wild Hunt','The Witcher','CD Projekt Red','2015-10-16','Role-Playing Game',1),
+    (null,'Dark Souls III','Dark Souls','FromSoftware','2016-04-23','Action RPG',0)
+);
+SELECT*from jeu;
 CREATE table Emprunter(
     id int not null PRIMARY key AUTO_INCREMENT,
     id_Member int not null,
@@ -55,3 +61,5 @@ create table Participer(
     Foreign Key (id_Member) REFERENCES MEMBRE (id),
     Foreign Key (id_Tournoi) REFERENCES Tournoi (id)
 );
+
+SHOW TABLES
