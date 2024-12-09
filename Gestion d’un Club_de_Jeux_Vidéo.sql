@@ -29,9 +29,8 @@ CREATE table jeu(
 );
 insert into jeu (
     VALUES
-    (null,'GTA V','Grand Theft Auto','Rockstar North','2017-12-06','Action-aventure',0),
-    (null,'Wild Hunt','The Witcher','CD Projekt Red','2015-10-16','Role-Playing Game',1),
-    (null,'Dark Souls III','Dark Souls','FromSoftware','2016-04-23','Action RPG',0)
+    (null,'Cyberpunk 2077','Cyberpunk','CD Projekt Red',' 2020-12-10','Action RPG',1),
+    (null,'Elden Ring','Standalone','FromSoftware','2022-02-25','Action-aventure',1)
 );
 SELECT*from jeu;
 CREATE table Emprunter(
