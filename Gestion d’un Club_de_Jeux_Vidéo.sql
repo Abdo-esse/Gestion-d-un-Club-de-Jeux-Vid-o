@@ -26,4 +26,15 @@ CREATE table jeu(
     anne_Sortie date,
     genre varchar(50),
     individuell BOOLEAN
-)
+);
+
+CREATE table Emprunter(
+    id int not null PRIMARY key AUTO_INCREMENT,
+    id_Member int not null,
+    id_jeu int not null,
+    date_Emprunter DATE,
+    date_retoure_prouve date,
+    date_retoure_relle date,
+    Foreign Key (id_Member) REFERENCES MEMBRE (id),
+    Foreign Key (id_jeu) REFERENCES jeu (id)
+    );
