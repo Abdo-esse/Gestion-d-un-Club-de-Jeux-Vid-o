@@ -16,7 +16,7 @@ insert into Abonnement(
     (null,'Famille','2024-09-01	','2025-08-31'),
     (null,'Pro','2024-02-01','2025-01-31')
 );
-
+SELECT*from abonnement;
 CREATE table MEMBRE(
     id int not null PRIMARY key AUTO_INCREMENT,
     id_Abonnement int not null,
@@ -25,6 +25,16 @@ CREATE table MEMBRE(
     tele VARCHAR(15),
     Foreign Key (id_Abonnement) REFERENCES Abonnement (id)
 );
+
+insert into MEMBRE(
+    values 
+    (null,1,'2023-02-10	','Ahmed El Yacoubi','+212 6 12 34 56 78'),
+    (null,2,'2023-05-15	','Fatima ','+212 6 98 76 54 32'),
+    (null,3,'2024-01-25	','Mohamed Bensalem','+212 6 54 32 10 98'),
+    (null,4,'2024-03-05	','Aicha Lamrani','+212 6 11 22 33 44'),
+    (null,5,'2024-06-20	','Youssef Bennani','+212 6 45 67 89 01'),
+    (null,3,'2024-08-12	','Rachid ESSEMLALI','+212 6 87 65 43 21')
+    );
 
 CREATE table jeu(
     id int not null PRIMARY key AUTO_INCREMENT,
