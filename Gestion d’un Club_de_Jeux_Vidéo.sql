@@ -80,6 +80,17 @@ create table Tournoi(
     date_tournoi date,
     recompense VARCHAR(50)
 );
+insert into Tournoi(
+    values 
+    (null,'Championnat FIFA 2024','2024-01-15','Trophée + 5000 MAD'),
+    (null,'Tournoi de Combat Tekken','2024-01-18','Console PS5'),
+    (null,'Course Mario Kart Deluxe','2024-02-05','Casque Gaming'),
+    (null,'Légendes de League of Legends','2024-03-10','10 000 MAD + Certificat'),
+    (null,'Super Smash Bros. Battle','2024-04-20','Manette Pro'),
+    (null,'Championnat Call of Duty','2024-05-15','15 000 MAD + Médaille'),
+    (null,'Tournoi Rocket League','2024-06-25','5000 MAD + Abonnement VIP'),
+    (null,'Grand Prix Gran Turismo','2024-07-30','Volant et pédalier gaming')
+);
 
 create table Participer(
     id int not null PRIMARY key AUTO_INCREMENT,
