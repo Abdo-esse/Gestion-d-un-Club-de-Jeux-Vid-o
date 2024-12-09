@@ -91,6 +91,7 @@ insert into Tournoi(
     (null,'Tournoi Rocket League','2024-06-25','5000 MAD + Abonnement VIP'),
     (null,'Grand Prix Gran Turismo','2024-07-30','Volant et pédalier gaming')
 );
+SELECT*from Tournoi;
 
 create table Participer(
     id int not null PRIMARY key AUTO_INCREMENT,
@@ -101,5 +102,17 @@ create table Participer(
     Foreign Key (id_Member) REFERENCES MEMBRE (id),
     Foreign Key (id_Tournoi) REFERENCES Tournoi (id)
 );
-
+insert into participer(
+    VALUES
+    (NULL,7,3,85.21,3),
+    (NULL,6,1,97.06,1),
+    (NULL,5,8,23.88,13),
+    (NULL,1,6,67.21,7),
+    (NULL,3,2,49.09,10),
+    (NULL,4,7,56.55,9),
+    (NULL,2,4,12.99,18),
+    (NULL,7,8,37.78,11),
+    (NULL,4,1,93.55,2),
+    (NULL,5,3,79.05,5)
+);
 SHOW TABLES
