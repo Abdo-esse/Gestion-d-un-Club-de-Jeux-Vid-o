@@ -8,3 +8,13 @@ CREATE table Abonnement(
     data_debut  date,
     date_fin  date
 );
+
+CREATE table MEMBRE(
+    id int not null PRIMARY key AUTO_INCREMENT,
+    id_Abonnement int not null,
+    date_rejoint date,
+    full_name varchar (50),
+    tele VARCHAR(15),
+    Foreign Key (id_Abonnement) REFERENCES Abonnement (id)
+);
+
