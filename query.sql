@@ -17,6 +17,6 @@ inner join Tournoi on Tournoi.id = Participer.id_Tournoi;
 
 
 --Trouver les membres qui ont souscrit à un abonnement annuel.
-
+select * from MEMBRE where id_Abonnement=1;
 
 
