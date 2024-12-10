@@ -14,11 +14,9 @@ from
     Participer
 inner join MEMBRE on MEMBRE.id = Participer.id_Member
 inner join Tournoi on Tournoi.id = Participer.id_Tournoi;
+
+
 --Trouver les membres qui ont souscrit à un abonnement annuel.
 
-SELECT 
-       full_name,
-       date_rejoint         
-from 
-    MEMBRE
-join Abonnement on Abonnement.id=MEMBRE.id_Abonnement;
+
+
