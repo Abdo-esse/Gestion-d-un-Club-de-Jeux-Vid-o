@@ -52,6 +52,11 @@ insert into jeu (
     (null,'Elden Ring','Standalone','FromSoftware','2022-02-25','Action-aventure',1)
 );
 SELECT*from jeu;
+
+UPDATE jeu 
+set anne_Sortie='2010-09-21'
+where id=1;
+
 CREATE table Emprunter(
     id int not null PRIMARY key AUTO_INCREMENT,
     id_Member int not null,
