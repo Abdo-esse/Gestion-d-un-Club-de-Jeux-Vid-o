@@ -43,3 +43,16 @@ select
  FROM
        MEMBRE
 inner join Abonnement on Abonnement.id=MEMBRE.id_Abonnement
+
+--Calculer le nombre total de jeux disponibles par genre.
+select count(genre) from jeu where  genre='Action/Aventure';
+
+--Trouver le tournoi avec le plus grand nombre de participants.
+
+SELECT 
+	-- Tournoi.nom_tournoi
+	COUNT(Participer.id_Member)
+FROM 
+	Participer
+GROUP BY 
+	Participer.id_Tournoi
