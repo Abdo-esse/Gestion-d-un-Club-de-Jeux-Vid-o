@@ -50,9 +50,12 @@ select count(genre) from jeu where  genre='Action/Aventure';
 --Trouver le tournoi avec le plus grand nombre de participants.
 
 SELECT 
-	-- Tournoi.nom_tournoi
-	COUNT(Participer.id_Member)
-FROM 
-	Participer
-GROUP BY 
-	Participer.id_Tournoi
+    MAX(counte) AS max_counte
+FROM( 
+    SELECT 
+        COUNT(id_Member) AS counte
+    FROM 
+        Participer
+    GROUP BY 
+        id_Tournoi
+) as resulta
