@@ -108,7 +108,14 @@ CREATE table Emprunter(
         (null,4,7,'2024-08-20','2024-08-27	','2024-08-29'),
         (null,6,2,'2024-10-15','2024-10-22','2024-10-22')
     );
+    insert into Emprunter(
+        VALUES
+        (null,3,8,'2024-12-05','2025-01-12','2025-01-10'),
+        (null,1,3,'2024-12-08','2025-01-15','2025-01-18')
+    );
     select * from Emprunter;
+     delete from Emprunter
+     where id =8;
      insert into Emprunter(
         VALUES
         (null,3,8,'2024-09-25','2025-01-12','2025-01-10'))

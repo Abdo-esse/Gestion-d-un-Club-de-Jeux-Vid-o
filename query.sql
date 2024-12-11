@@ -70,3 +70,9 @@ group by id_jeu;
 SELECT titre , colection , anne_Sortie
 FROM jeu where  anne_Sortie>'2020-01-01'
 ORDER BY titre  ;
+--Trouver les membres qui ont emprunté un jeu, mais ne l'ont pas encore rendu.
+  
+ select id_Member
+from Emprunter where  date_retoure_prouve > now() and  date_retoure_prouve<'2026-01-01'
+
+
