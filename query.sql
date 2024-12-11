@@ -65,4 +65,8 @@ select
       id_jeu
 from 
      Emprunter
-group by id_jeu
+group by id_jeu;
+--Afficher les jeux sortis après une certaine année, triés par ordre alphabétique. 
+SELECT titre , colection , anne_Sortie
+FROM jeu where  anne_Sortie>'2020-01-01'
+ORDER BY titre  ;
