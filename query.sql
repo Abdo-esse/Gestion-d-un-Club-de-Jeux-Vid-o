@@ -61,10 +61,12 @@ FROM(
 ) as resulta;
 --Afficher le nombre d'emprunts réalisés par chaque membre.
 select 
-      count(id_Member) ,
+      MEMBRE.full_name,
+      count(id_Member) as nombre_emprunts,
       id_jeu
 from 
      Emprunter
+inner join MEMBRE on MEMBRE.id=Emprunter.id_Member
 group by id_jeu;
 --Afficher les jeux sortis après une certaine année, triés par ordre alphabétique. 
 SELECT titre , colection , anne_Sortie
@@ -72,7 +74,21 @@ FROM jeu where  anne_Sortie>'2020-01-01'
 ORDER BY titre  ;
 --Trouver les membres qui ont emprunté un jeu, mais ne l'ont pas encore rendu.
   
- select id_Member
-from Emprunter where  date_retoure_prouve > now() and  date_retoure_prouve<'2026-01-01'
+ select MEMBRE.full_name,id_Member
+from Emprunter
+inner join MEMBRE on MEMBRE.id=Emprunter.id_Member
+ where  date_retoure_prouve > now() and  date_retoure_prouve<'2026-01-01';
+
+-- Lister les tournois ayant eu lieu entre deux dates spécifiques.
+
+select  nom_tournoi
+from Tournoi
+where date_tournoi >'2024-01-15' and date_tournoi<now();
+
+-- Afficher les membres avec plusieurs emprunts actifs.
+select MEMBRE.full_name,count(id_Member)
+ FROM Emprunter
+ inner join MEMBRE on MEMBRE.id=Emprunter.id_Member
+ GROUP BY id_Member;
 
 
