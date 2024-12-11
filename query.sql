@@ -58,4 +58,11 @@ FROM(
         Participer
     GROUP BY 
         id_Tournoi
-) as resulta
+) as resulta;
+--Afficher le nombre d'emprunts réalisés par chaque membre.
+select 
+      count(id_Member) ,
+      id_jeu
+from 
+     Emprunter
+group by id_jeu
